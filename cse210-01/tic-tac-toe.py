@@ -1,3 +1,7 @@
+'''
+CSE 210 Assignment: tic-tac-toe
+Author: McKay Thomas
+'''
 def main():
     # give each space a variable to be updated
     a, b, c, d, e, f, g, h, i = 1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -20,7 +24,7 @@ def main():
             break
 
         whose_turn = x_or_o(turn)
-        player_choice = input("Which square would you like to play? ")
+        player_choice = input(f"{whose_turn}'s move. Which square would you like to play? (1-9) ")
         print()
 
         try:
@@ -68,9 +72,9 @@ def make_board(a,b,c,d,e,f,g,h,i):
 # determine whose turn it is
 def x_or_o(i):
     if i % 2 != 1:
-        who = 'x'
+        who = "x"
     else:
-        who = 'o'
+        who = "o"
     return who
 
 # determine if there is a winner and the game should end.
